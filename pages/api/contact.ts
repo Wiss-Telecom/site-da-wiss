@@ -33,6 +33,5 @@ export default function mailer (req: NextApiRequest, res: NextApiResponse) {
     if (err) console.log(err)
     else console.log(info)
   })
-  console.log('reached')
-  return res.status(200)
+  res.status(200).end()
 }

@@ -11,7 +11,7 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
     console.log('Sending')
     let data = {
@@ -19,7 +19,8 @@ export default function Home() {
       email,
       message
     }
-    fetch('/api/contact', {
+
+    await fetch('/api/contact', {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',
@@ -35,8 +36,6 @@ export default function Home() {
           setName('')
           setEmail('')
           setMessage('')
-          const arr = document.querySelector('.user_input')
-          console.log(arr)
         }
       })
       .catch((error) => {
