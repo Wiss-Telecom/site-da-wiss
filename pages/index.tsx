@@ -11,6 +11,7 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
+
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
     console.log('Sending')
@@ -84,22 +85,29 @@ export default function Home() {
             placeholder='Seu nome'
             required
             onChange={(e) => setName(e.target.value)}
+            className={styles.input_field}
           />
           <input
             id='email'
             type='email'
-            placeholder='E-mail'
+            placeholder='Seu e-mail'
             required
             onChange={(e) => setEmail(e.target.value)}
+            className={styles.input_field}
           />
           <textarea
-            name='message'
             id='message'
-            cols={30}
-            rows={10}
+            name='message'
+            placeholder='Sua mensagem'
             onChange={(e) => setMessage(e.target.value)}
+            className={styles.input_field}
           ></textarea>
-          <input type='submit' onClick={(e) => handleSubmit(e)} />
+          <input
+            type='submit'
+            value='Enviar'
+            onClick={(e) => handleSubmit(e)}
+            className={styles.submit}
+          />
         </form>
       </aside>
       <footer className={styles.footer}>
