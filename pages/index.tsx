@@ -33,14 +33,17 @@ export default function Home() {
       message
     }
 
-    await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
+    await fetch(
+      'https://us-central1-mail-sender-55e6b.cloudfunctions.net/sendMail',
+      {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }
+    )
       .then((res) => {
         if (res.status === 200) {
           setSubmitted(true)
