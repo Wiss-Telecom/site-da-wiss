@@ -3,9 +3,9 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
 
 export default function mailer (req: NextApiRequest, res: NextApiResponse) {
-  const EMAIL_HOST = process.env.EMAIL_HOST
-  const EMAIL_ACCOUNT = process.env.EMAIL_ACCOUNT
-  const PASSWORD = process.env.EMAIL_PASSWORD
+  const EMAIL_HOST = process.env.NEXT_PUBLIC_EMAIL_HOST
+  const EMAIL_ACCOUNT = process.env.NEXT_PUBLIC_EMAIL_ACCOUNT
+  const PASSWORD = process.env.NEXT_PUBLIC_EMAIL_PASSWORD
 
   const transporter = nodemailer.createTransport({
     host: EMAIL_HOST,
@@ -19,7 +19,7 @@ export default function mailer (req: NextApiRequest, res: NextApiResponse) {
 
   const mailData = {
     from: `${req.body.email}`,
-    to: 't.d.adomaitis@gmail.com',
+    to: 'thiago@wisstelecom.com.br',
     subject: `Mensagem recebida no site de ${req.body.name}`,
     text: req.body.message,
     html: `
