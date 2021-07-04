@@ -27,7 +27,6 @@ export default function Home() {
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
-    console.log('Sending')
     let data = {
       name,
       email,
@@ -43,9 +42,7 @@ export default function Home() {
       body: JSON.stringify(data)
     })
       .then((res) => {
-        console.log('Response received')
         if (res.status === 200) {
-          console.log('Response succeeded!')
           setSubmitted(true)
           setName('')
           setEmail('')
