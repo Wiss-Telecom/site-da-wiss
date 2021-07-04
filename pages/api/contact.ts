@@ -19,7 +19,7 @@ export default function mailer (req: NextApiRequest, res: NextApiResponse) {
 
   const mailData = {
     from: `${req.body.email}`,
-    to: 'wiss@wisstelecom.com.br',
+    to: 't.d.adomaitis@gmail.com',
     subject: `Mensagem recebida no site de ${req.body.name}`,
     text: req.body.message,
     html: `
