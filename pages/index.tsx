@@ -5,12 +5,25 @@ import styles from '../styles/Home.module.css'
 import logo from '../public/wiss-logo.svg'
 import facebook from '../public/facebook.svg'
 import instagram from '../public/instagram.svg'
+import user from '../public/user.svg'
+import up from '../public/up.svg'
+import messageSent from '../public/message_sent.svg'
 
 export default function Home() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
+
+  const [isAsideOpen, setIsAsideOpen] = useState(false)
+
+  const handleContactButtonClick = () => {
+    setIsAsideOpen(!isAsideOpen)
+  }
+
+  const handleAnotherMessageClick = () => {
+    setSubmitted(!submitted)
+  }
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
@@ -71,51 +84,100 @@ export default function Home() {
           >
             Fale conosco pelo Whatsapp
           </a>
-          <button className={styles.contact_button}>
+          <button
+            className={styles.contact_button}
+            onClick={handleContactButtonClick}
+          >
             Envie-nos uma mensagem
           </button>
         </div>
       </main>
-      <aside className={styles.aside}>
-        <form className={styles.contact_form}>
-          <input
-            id='name'
-            type='text'
-            autoComplete='name'
-            placeholder='Seu nome'
-            required
-            onChange={(e) => setName(e.target.value)}
-            className={styles.input_field}
-          />
-          <input
-            id='email'
-            type='email'
-            placeholder='Seu e-mail'
-            required
-            onChange={(e) => setEmail(e.target.value)}
-            className={styles.input_field}
-          />
-          <textarea
-            id='message'
-            name='message'
-            placeholder='Sua mensagem'
-            onChange={(e) => setMessage(e.target.value)}
-            className={styles.input_field}
-          ></textarea>
-          <input
-            type='submit'
-            value='Enviar'
-            onClick={(e) => handleSubmit(e)}
-            className={styles.submit}
-          />
-        </form>
+      <aside
+        className={`${styles.aside} ${isAsideOpen ? styles.aside_show : ''}`}
+      >
+        <div className={styles.form_top}>
+          <div
+            className={`${styles.close_form} ${
+              isAsideOpen ? styles.close_form_open : ''
+            }`}
+            onClick={handleContactButtonClick}
+          >
+            <Image
+              className={styles.icon}
+              alt='Up arrow'
+              src={up}
+              width={44}
+              height={38}
+            />
+          </div>
+        </div>
+        {submitted ? (
+          <>
+            <div className={styles.message_sent_container}>
+              <Image
+                className={styles.message_sent}
+                alt='Envelope'
+                src={messageSent}
+                layout='responsive'
+              />
+            </div>
+            <h3 className={`${styles.title} ${styles.form_title}`}>
+              Agradecemos por seu contato.
+            </h3>
+            <p className={styles.text}>Entraremos em contato em breve!</p>
+            <button
+              className={styles.submit}
+              onClick={handleAnotherMessageClick}
+            >
+              Enviar nova mensagem
+            </button>
+          </>
+        ) : (
+          <>
+            <h3 className={`${styles.title} ${styles.form_title}`}>
+              Envie sua mensagem
+            </h3>
+            <form className={styles.contact_form}>
+              <input
+                id='name'
+                type='text'
+                autoComplete='name'
+                placeholder='Seu nome'
+                required
+                onChange={(e) => setName(e.target.value)}
+                className={styles.input_field}
+              />
+              <input
+                id='email'
+                type='email'
+                placeholder='Seu e-mail'
+                required
+                onChange={(e) => setEmail(e.target.value)}
+                className={styles.input_field}
+              />
+              <textarea
+                id='message'
+                name='message'
+                placeholder='Sua mensagem'
+                onChange={(e) => setMessage(e.target.value)}
+                className={styles.input_field}
+              ></textarea>
+              <input
+                type='submit'
+                value='Enviar'
+                onClick={(e) => handleSubmit(e)}
+                className={styles.submit}
+              />
+            </form>
+          </>
+        )}
       </aside>
       <footer className={styles.footer}>
         <div className={styles.social_media_icons_container}>
           <a href='https://www.facebook.com/wisstelecom'>
             <Image
               className={styles.icon}
-              alt='Company Logo'
+              alt='Facebook icon'
               src={facebook}
               width={35}
               height={35}
@@ -124,8 +186,17 @@ export default function Home() {
           <a href='https://www.instagram.com/wisstelecom/'>
             <Image
               className={styles.icon}
-              alt='Company Logo'
+              alt='Instagram icon'
               src={instagram}
+              width={35}
+              height={35}
+            />
+          </a>
+          <a href='http://68.183.119.146/radiusnet/cda'>
+            <Image
+              className={styles.icon}
+              alt='Person Icon'
+              src={user}
               width={35}
               height={35}
             />
