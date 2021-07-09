@@ -10,6 +10,8 @@ import up from '../public/up.svg'
 import messageSent from '../public/message_sent.svg'
 
 export default function Home() {
+  const API_URI =
+    'https://us-central1-mail-sender-55e6b.cloudfunctions.net/sendMail'
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -33,17 +35,14 @@ export default function Home() {
       message
     }
 
-    await fetch(
-      'https://us-central1-mail-sender-55e6b.cloudfunctions.net/sendMail',
-      {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }
-    )
+    await fetch(API_URI, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
       .then((res) => {
         if (res.status === 200) {
           setSubmitted(true)
