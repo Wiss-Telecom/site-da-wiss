@@ -76,6 +76,12 @@ export default function Home() {
         <h1 className={styles.title}>
           Estamos construindo um novo site para você.
         </h1>
+        <div className={styles.customer_area_link}>
+          <p>
+            Central do Assinante?
+            <a href='http://68.183.119.146/radiusnet/cda'> Clique aqui.</a>
+          </p>
+        </div>
         <div className={styles.buttons_container}>
           <a
             href='https://wa.me/5519999749477?text=Olá,%20tudo%20bem?'
