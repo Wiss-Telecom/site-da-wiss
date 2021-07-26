@@ -45,7 +45,7 @@
   font-weight: 600;
 }
 
-.customer_area_link a {
+.customer_area_link a span {
   text-decoration: underline;
 }
 

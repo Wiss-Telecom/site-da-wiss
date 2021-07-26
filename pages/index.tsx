@@ -79,7 +79,10 @@ export default function Home() {
         <div className={styles.customer_area_link}>
           <p>
             Central do Assinante?
-            <a href='http://68.183.119.146/radiusnet/cda'> Clique aqui.</a>
+            <a href='http://68.183.119.146/radiusnet/cda'>
+              {' '}
+              <span>Clique aqui.</span>
+            </a>
           </p>
         </div>
         <div className={styles.buttons_container}>
