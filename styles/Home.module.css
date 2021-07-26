@@ -229,16 +229,18 @@
     max-width: 875px;
   }
 
+  .customer_area_link {
+    margin-top: 2em;
+    font-size: 1.5rem;
+    max-width: 400px;
+  }
+
   .buttons_container {
+    margin-top: 2em;
     flex-direction: row-reverse;
   }
 
   .aside {
     max-width: 400px;
-  }
-
-  .customer_area_link {
-    margin-top: 0.75em;
-    font-size: 1.5rem;
   }
 }
