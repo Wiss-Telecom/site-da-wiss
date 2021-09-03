@@ -79,7 +79,7 @@ export default function Home() {
         <div className={styles.customer_area_link}>
           <p>
             Central do Assinante?
-            <a href='http://68.183.119.146/radiusnet/cda'>
+            <a href='https://radiusnet.wisstelecom.com.br/radiusnet/cda/login.php'>
               {' '}
               <span>Clique aqui.</span>
             </a>
