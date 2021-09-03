@@ -30,11 +30,23 @@
 }
 
 .title {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   max-width: 500px;
   text-align: center;
   color: #485437;
   margin-top: 0.25em;
+}
+
+.customer_area_link {
+  font-size: 1.125rem;
+  max-width: 200px;
+  text-align: center;
+  color: #485437;
+  font-weight: 600;
+}
+
+.customer_area_link a span {
+  text-decoration: underline;
 }
 
 .buttons_container {
@@ -197,12 +209,13 @@
 }
 
 @media (min-width: 750px) {
-  .buttons_container {
-    margin-top: 2em;
-  }
-
   .aside {
     max-width: 100%;
+  }
+
+  .customer_area_link {
+    margin-top: 1.75em;
+    font-size: 1.25rem;
   }
 }
 
@@ -216,7 +229,14 @@
     max-width: 875px;
   }
 
+  .customer_area_link {
+    margin-top: 2em;
+    font-size: 1.5rem;
+    max-width: 400px;
+  }
+
   .buttons_container {
+    margin-top: 2em;
     flex-direction: row-reverse;
   }
 
