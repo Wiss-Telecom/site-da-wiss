@@ -200,7 +200,7 @@ export default function Home() {
               height={35}
             />
           </a>
-          <a href='http://68.183.119.146/radiusnet/cda'>
+          <a href='https://radiusnet.wisstelecom.com.br/radiusnet/cda/login.php'>
             <Image
               className={styles.icon}
               alt='Person Icon'
