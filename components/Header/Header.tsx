@@ -1,16 +1,31 @@
-import Logo from '../Logo/Logo'
-import Navbar from '../Navbar/Navbar'
+import Image from 'next/image'
+import bg from '../../public/images/bg2.jpg'
+import Container from '../Container/Container'
 
 import styles from './Header.module.css'
 
 export default function Header() {
+  const style = {
+    backgroundImage: `url(${bg.src})`,
+    backgroundSize: 'cover',
+    with: '100%',
+    borderTop: '1px solid var(--very-light-greenish-gray)',
+    borderBottom: '1px solid var(--very-light-greenish-gray)'
+  }
   return (
-    <header className={styles.header}>
-      <div className={styles.logo_container}>
-        <Logo />
-      </div>
-      <Navbar />
-      <h1>É muito mais que internet!</h1>
+    <header style={style}>
+      <Container>
+        <h1 className={styles.mainTitle}>É muito mais que internet!</h1>
+        <div className={styles.titleImageContainer}>
+          <Image
+            alt='Field with mountains on the horizon'
+            src={bg}
+            layout='fill'
+            objectFit='cover'
+            className={styles.titleImage}
+          />
+        </div>
+      </Container>
     </header>
   )
 }

@@ -1,3 +1,26 @@
-.logo {
-  
+.mainTitle {
+  padding: 4em 0;
+  text-align: right;
+  text-transform: uppercase;
+  width: 75%;
+  max-width: 500px;
+  margin-left: auto;
+  font-size: 2.25rem;
+  color: var(--very-light-greenish-gray);
+  text-shadow: 3px 4px 5px #1C0C08;
+  font-weight: 700;
+}
+
+.titleImageContainer {
+  position: relative;
+}
+
+.titleImage {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .mainTitle {
+    font-size: 3.5em;
+  }
 }

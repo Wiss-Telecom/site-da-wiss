@@ -1,0 +1,19 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  width: 35%;
+  max-width: 150px;
+}
+
+.navList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.navList li {
+  margin-bottom: 10px;
+}

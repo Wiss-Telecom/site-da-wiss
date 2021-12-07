@@ -2,9 +2,61 @@
   text-align: center;
 }
 
-.cardContainer {
+.buttonsContainer {
   display: flex;
   flex-direction: column;
+  margin: 3em auto 1.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkButton {
+  width: 300px;
+  margin: 0.5em;
+  padding: 0.9em 1em;
+  border-radius: 10px;
+  color: var(--very-light-greenish-gray);
+  background-color: var(--light-green);
+  text-decoration: none;
+  font-family: var(--button-font);
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.linkButton:first-of-type {
+  margin-bottom: 2em;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 4em;
+}
+
+.introParagraph {
+  text-align: left;
+  max-width: 80%;
+  margin-right: auto;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  align-self: center;
+}
+
+.introImageContainer {
+  width: 0;
+  position: relative;
+}
+
+.cardContainer {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
 }
 
 .card {
@@ -12,9 +64,9 @@
   -webkit-box-shadow: 0 0 7px -2px rgba(72,84,53,0.55); 
   box-shadow: 0 0 7px -2px rgba(72,84,53,0.55);
   overflow: hidden;
-  margin: 1em;
   min-width: 250px;
-  max-width: 300px;
+  margin-bottom: 3em;
+  align-self: stretch;
 }
 
 .cardImageContainer {
@@ -29,9 +81,74 @@
   padding: 1em 0.5em;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
+  .buttonsContainer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .linkButton {
+    width: 360px;
+    margin: 0.5em;
+    padding: 0.85em 1em;
+    border-radius: 10px;
+    font-size: 1.25em;
+  }
+
+  .linkButton:first-of-type {
+    margin-bottom: 0.5em;
+  }
+
+  .introParagraph {
+    max-width: 65%;
+    font-size: 1.2rem;
+  }
+
   .cardContainer {
     flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    max-width: 45%;
   }
 }
   
+@media screen and (min-width: 1200px) {
+  .buttonsContainer {
+    max-width: 950px;
+    justify-content: space-between;
+  }
+
+  .linkButton {
+    width: 420px;
+    font-size: 1.5em;
+  }
+
+  .hero {
+    gap: 2em;
+    margin-bottom: 5em;
+  }
+
+  .introParagraph {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .introImageContainer {
+    width: 100%;
+    min-height: 450px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .cardContainer {
+    justify-content: space-between;
+  }
+
+  .card {
+    max-width: 30%;
+  }
+}
