@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import Row from '../Row/Row'
-import Container from '../Container/Container'
-import bg from '../../public/images/bg2.jpg'
+import Row from '@/components/Row/Row'
+import Container from '@/components/Container/Container'
+import bg from '@/images/bg2.jpg'
 
 import styles from './Header.module.css'
 

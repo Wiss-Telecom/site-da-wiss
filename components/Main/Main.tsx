@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import Row from '../Row/Row'
-import Container from '../Container/Container'
-import smile from '../../public/images/smile.jpg'
-import card1 from '../../public/images/cards/card1.jpg'
-import card2 from '../../public/images/cards/card2.jpg'
-import card3 from '../../public/images/cards/card3.jpg'
+import Row from '@/components/Row/Row'
+import Container from '@/components/Container/Container'
+import smile from '@/images/smile.jpg'
+import card1 from '@/images/cards/card1.jpg'
+import card2 from '@/images/cards/card2.jpg'
+import card3 from '@/images/cards/card3.jpg'
 
 import styles from './Main.module.css'
 

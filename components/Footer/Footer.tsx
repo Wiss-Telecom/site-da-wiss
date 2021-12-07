@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import Row from '../Row/Row'
-import Container from '../Container/Container'
-import logo from '../../public/wiss-logo.svg'
+import Container from '@/components/Container/Container'
+import Logo from '@/components/Logo/Logo'
 
 import styles from './Footer.module.css'
 
@@ -11,12 +10,7 @@ export default function Footer() {
       <Container>
         <footer>
           <div className={styles.logo_container}>
-            <Image
-              className={styles.navbar_logo}
-              alt='Company Logo'
-              src={logo}
-              layout='responsive'
-            />
+            <Logo />
           </div>
           <ul>
             <li>Central do Assinante</li>

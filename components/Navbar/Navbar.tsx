@@ -1,6 +1,6 @@
-import Row from '../Row/Row'
-import Container from '../Container/Container'
-import Logo from '../Logo/Logo'
+import Row from '@/components/Row/Row'
+import Container from '@/components/Container/Container'
+import Logo from '@/components/Logo/Logo'
 
 import styles from './Navbar.module.css'
 
