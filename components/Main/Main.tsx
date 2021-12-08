@@ -20,7 +20,7 @@ export default function Main() {
             <div className={styles.buttonsContainer}>
               <a
                 className={styles.linkButton}
-                href='https://https://radiusnet.wisstelecom.com.br/radiusnet/cda/login.php'
+                href='https://radiusnet.wisstelecom.com.br/radiusnet/cda/login.php'
               >
                 Central do Assinante
               </a>
@@ -173,7 +173,7 @@ export default function Main() {
                     placeholder='Seu nome'
                     required
                     // onChange={(e) => setName(e.target.value)}
-                    // className={styles.input_field}
+                    className={styles.inputField}
                   />
                   <input
                     id='email'
@@ -181,20 +181,20 @@ export default function Main() {
                     placeholder='Seu e-mail'
                     required
                     // onChange={(e) => setEmail(e.target.value)}
-                    // className={styles.input_field}
+                    className={styles.inputField}
                   />
                   <textarea
                     id='message'
                     name='message'
                     placeholder='Sua mensagem'
                     // onChange={(e) => setMessage(e.target.value)}
-                    // className={styles.input_field}
+                    className={styles.inputField}
                   ></textarea>
                   <input
                     type='submit'
                     value='Enviar'
                     // onClick={(e) => handleSubmit(e)}
-                    // className={styles.submit}
+                    className={styles.submit}
                   />
                 </form>
               </div>

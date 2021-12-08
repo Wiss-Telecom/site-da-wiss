@@ -21,7 +21,7 @@ export default function Navbar() {
               <li>
                 <a
                   className={styles.linkButton}
-                  href='https://https://radiusnet.wisstelecom.com.br/radiusnet/cda/login.php'
+                  href='https://radiusnet.wisstelecom.com.br/radiusnet/cda/login.php'
                 >
                   Central do Assinante
                 </a>
