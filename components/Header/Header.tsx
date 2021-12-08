@@ -11,7 +11,8 @@ export default function Header() {
     backgroundSize: 'cover',
     with: '100%',
     borderTop: '1px solid var(--very-light-greenish-gray)',
-    borderBottom: '1px solid var(--very-light-greenish-gray)'
+    borderBottom: '1px solid var(--very-light-greenish-gray)',
+    marginTop: '5em'
   }
   return (
     <Row>

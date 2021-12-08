@@ -1,6 +1,5 @@
 .mainContainer {
   min-height: 100vh;
-  padding-top: 0.5em;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

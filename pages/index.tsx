@@ -13,15 +13,9 @@ export default function Home() {
         <title>Wiss Telecom - Internet para quem precisa</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
-      <Row>
-        <Navbar />
-      </Row>
-      <Row>
-        <Header />
-      </Row>
-      <Row>
-        <Main />
-      </Row>
+      <Navbar />
+      <Header />
+      <Main />
       <Footer />
     </div>
   )
