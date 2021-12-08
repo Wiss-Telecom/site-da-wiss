@@ -15,8 +15,17 @@ export default function Navbar() {
           <nav>
             <ul className={styles.navList}>
               <li>Home</li>
-              <li>Contato</li>
-              <li>Central do Assinante</li>
+              <li>
+                <a href='#contact'>Contato</a>
+              </li>
+              <li>
+                <a
+                  className={styles.linkButton}
+                  href='https://https://radiusnet.wisstelecom.com.br/radiusnet/cda/login.php'
+                >
+                  Central do Assinante
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

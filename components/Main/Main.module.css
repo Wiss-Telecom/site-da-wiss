@@ -38,7 +38,7 @@
 .introParagraph {
   max-width: 80%;
   margin-right: auto;
-  padding: 1em 0;
+  padding-top: 1em;
   text-align: left;
   font-size: 1.1rem;
   line-height: 1.6rem;
@@ -109,6 +109,32 @@
   padding-left: 0;
 }
 
+.contact {
+  background-color: var(--form-bg-color);
+}
+
+.contactContent {
+  padding: 1.5em 0;
+  text-align: left;
+}
+
+.contactImageContainer {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.formTitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1.5em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
 @media screen and (min-width: 768px) {
   .buttonsContainer {
     flex-direction: row;
@@ -129,7 +155,7 @@
 
   .introParagraph {
     max-width: 65%;
-    padding: 2.5em 0;
+    padding-top: 2.5em;
     font-size: 1.2rem;
   }
 
@@ -140,6 +166,37 @@
 
   .card {
     max-width: 45%;
+  }
+
+  .section {
+    padding: 3em 0;
+  }
+
+  .sectionContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    align-items: center;
+  }
+
+  .imageContainer {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .section2Content {
+    direction: rtl;
+  }
+
+  .contactContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    align-items: flex-start;
+  }
+
+  .formTitle {
+    margin-top: 0;
   }
 }
   
@@ -179,5 +236,9 @@
 
   .card {
     max-width: 30%;
+  }
+
+  .section1Content div p {
+    max-width: 90%;
   }
 }

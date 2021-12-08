@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Row from '@/components/Row/Row'
 import Container from '@/components/Container/Container'
 import smile from '@/images/smile.jpg'
-import trator from '@/images/img1.jpg'
+import woman from '@/images/woman.jpg'
+import man from '@/images/img3.jpg'
 import hoe from '@/images/img2.jpg'
 import card1 from '@/images/cards/card1.jpg'
 import card2 from '@/images/cards/card2.jpg'
@@ -58,21 +59,6 @@ export default function Main() {
               <div className={styles.card}>
                 <div className={styles.cardImageContainer}>
                   <Image
-                    alt='plants being irrigated'
-                    src={card1}
-                    layout='fill'
-                    objectFit='cover'
-                  />
-                </div>
-                <p>
-                  Mora ou trabalha na fazenda e não tem acesso fácil a internet?
-                  <br />A Wiss Telecom leva para você a qualidade e a tecnologia
-                  da cidade!
-                </p>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardImageContainer}>
-                  <Image
                     alt='man sitting in field, looking to mountains'
                     src={card2}
                     layout='fill'
@@ -83,6 +69,21 @@ export default function Main() {
                   Escolha o plano perfeito para atender as suas necessidades!
                   Temos tecnologia para oferecer a você internet com alta
                   velocidade, estável e de qualidade!
+                </p>
+              </div>
+              <div className={styles.card}>
+                <div className={styles.cardImageContainer}>
+                  <Image
+                    alt='plants being irrigated'
+                    src={card1}
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </div>
+                <p>
+                  Mora ou trabalha na fazenda e não tem acesso fácil a internet?
+                  <br />A Wiss Telecom leva para você a qualidade e a tecnologia
+                  da cidade!
                 </p>
               </div>
               <div className={styles.card}>
@@ -105,78 +106,98 @@ export default function Main() {
         </section>
         <section className={`${styles.section} ${styles.section2}`}>
           <Container>
-            <div className={styles.imageContainer}>
-              <Image src={trator} alt='a trator on farm' layout='responsive' />
-            </div>
-            <div>
-              <p>
-                A Wiss Telecom nasceu para oferecer atendimento de qualidade aos
-                moradores da zona rural. Nosso objetivo é levar a todos acesso à
-                Internet de excelência, colaborando para a modernização do campo
-                e democratização do acesso à Internet.
-              </p>
+            <div
+              className={`${styles.sectionContent} ${styles.section1Content}`}
+            >
+              <div className={styles.imageContainer}>
+                <Image src={woman} alt='a woman on farm' layout='responsive' />
+              </div>
+              <div>
+                <p>
+                  A Wiss Telecom nasceu para oferecer atendimento de qualidade
+                  aos moradores da zona rural.
+                </p>
+                <p>
+                  Nosso objetivo é levar a todos acesso à Internet de
+                  excelência, colaborando para a modernização do campo e
+                  democratização do acesso à Internet.
+                </p>
+              </div>
             </div>
           </Container>
         </section>
         <section className={`${styles.section} ${styles.section3}`}>
           <Container>
-            <div className={styles.imageContainer}>
-              <Image
-                src={hoe}
-                alt='man with a hoe on field'
-                layout='responsive'
-              />
-            </div>
-            <div>
-              <p>
-                Com planos sem franquia e com foco total em áreas rurais,
-                trabalhos para levar até você:
-              </p>
-              <ul className={styles.advantagesList}>
-                <li>Mais velocidades</li>
-                <li>Mais estabilidade</li>
-                <li>Valores amigáveis</li>
-                <li>Atendimento personalizado</li>
-              </ul>
+            <div
+              className={`${styles.sectionContent} ${styles.section2Content}`}
+            >
+              <div className={styles.imageContainer}>
+                <Image
+                  src={hoe}
+                  alt='man with a hoe on field'
+                  layout='responsive'
+                />
+              </div>
+              <div>
+                <p>
+                  Com planos sem franquia e com foco total em áreas rurais,
+                  trabalhamos para levar até você
+                </p>
+                <ul className={styles.advantagesList}>
+                  <li>Mais velocidades</li>
+                  <li>Mais estabilidade</li>
+                  <li>Valores amigáveis</li>
+                  <li>Atendimento personalizado</li>
+                </ul>
+              </div>
             </div>
           </Container>
         </section>
-        <section id='contact'>
+        <section id='contact' className={styles.contact}>
           <Container>
-            <div></div>
-            <div>
-              <form>
-                <input
-                  id='name'
-                  type='text'
-                  autoComplete='name'
-                  placeholder='Seu nome'
-                  required
-                  // onChange={(e) => setName(e.target.value)}
-                  // className={styles.input_field}
+            <div className={styles.contactContent}>
+              <div className={styles.contactImageContainer}>
+                <Image
+                  src={man}
+                  alt='man with PC on desk'
+                  layout='responsive'
                 />
-                <input
-                  id='email'
-                  type='email'
-                  placeholder='Seu e-mail'
-                  required
-                  // onChange={(e) => setEmail(e.target.value)}
-                  // className={styles.input_field}
-                />
-                <textarea
-                  id='message'
-                  name='message'
-                  placeholder='Sua mensagem'
-                  // onChange={(e) => setMessage(e.target.value)}
-                  // className={styles.input_field}
-                ></textarea>
-                <input
-                  type='submit'
-                  value='Enviar'
-                  // onClick={(e) => handleSubmit(e)}
-                  // className={styles.submit}
-                />
-              </form>
+              </div>
+              <div>
+                <h2 className={styles.formTitle}>Fale conosco</h2>
+                <form className={styles.form}>
+                  <input
+                    id='name'
+                    type='text'
+                    autoComplete='name'
+                    placeholder='Seu nome'
+                    required
+                    // onChange={(e) => setName(e.target.value)}
+                    // className={styles.input_field}
+                  />
+                  <input
+                    id='email'
+                    type='email'
+                    placeholder='Seu e-mail'
+                    required
+                    // onChange={(e) => setEmail(e.target.value)}
+                    // className={styles.input_field}
+                  />
+                  <textarea
+                    id='message'
+                    name='message'
+                    placeholder='Sua mensagem'
+                    // onChange={(e) => setMessage(e.target.value)}
+                    // className={styles.input_field}
+                  ></textarea>
+                  <input
+                    type='submit'
+                    value='Enviar'
+                    // onClick={(e) => handleSubmit(e)}
+                    // className={styles.submit}
+                  />
+                </form>
+              </div>
             </div>
           </Container>
         </section>

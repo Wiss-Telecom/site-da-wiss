@@ -6,6 +6,7 @@
   --olive-green: #5A6C3F;
   --light-green: #94c049;
   --very-light-green: #b6d671;
+  --form-bg-color: rgba(90, 108, 63, 0.4);
   --very-light-greenish-gray: #f1f1e8;
 }
 
@@ -17,6 +18,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 a {
