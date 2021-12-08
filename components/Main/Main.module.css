@@ -36,9 +36,10 @@
 }
 
 .introParagraph {
-  text-align: left;
   max-width: 80%;
   margin-right: auto;
+  padding: 1em 0;
+  text-align: left;
   font-size: 1.1rem;
   line-height: 1.6rem;
   align-self: center;
@@ -81,6 +82,33 @@
   padding: 1em 0.5em;
 }
 
+.section {
+  padding: 1em 0 2em;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+}
+
+.section2 {
+  background-color: var(--olive-green);
+  color: var(--very-light-greenish-gray);
+}
+
+.imageContainer {
+  overflow: hidden;
+  margin: 3em auto 3em;
+  border-radius: 10px;
+}
+
+.section3 {
+  text-align: center;
+}
+
+.advantagesList {
+  list-style: none;
+  padding-left: 0;
+}
+
 @media screen and (min-width: 768px) {
   .buttonsContainer {
     flex-direction: row;
@@ -101,6 +129,7 @@
 
   .introParagraph {
     max-width: 65%;
+    padding: 2.5em 0;
     font-size: 1.2rem;
   }
 

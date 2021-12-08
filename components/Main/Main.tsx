@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Row from '@/components/Row/Row'
 import Container from '@/components/Container/Container'
 import smile from '@/images/smile.jpg'
+import trator from '@/images/img1.jpg'
+import hoe from '@/images/img2.jpg'
 import card1 from '@/images/cards/card1.jpg'
 import card2 from '@/images/cards/card2.jpg'
 import card3 from '@/images/cards/card3.jpg'
@@ -11,9 +13,9 @@ import styles from './Main.module.css'
 export default function Main() {
   return (
     <Row>
-      <Container>
-        <main className={styles.main}>
-          <section className={styles.section1} id='section1'>
+      <main className={styles.main}>
+        <section className={styles.section1} id='section1'>
+          <Container>
             <div className={styles.buttonsContainer}>
               <a
                 className={styles.linkButton}
@@ -99,34 +101,48 @@ export default function Main() {
                 </p>
               </div>
             </div>
-          </section>
-          <section id='section2'>
-            <div></div>
+          </Container>
+        </section>
+        <section className={`${styles.section} ${styles.section2}`}>
+          <Container>
+            <div className={styles.imageContainer}>
+              <Image src={trator} alt='a trator on farm' layout='responsive' />
+            </div>
             <div>
               <p>
-                A Wiss Telecom nasceu para suprir a necessidade de atendimento
-                de qualidade aos moradores da zona rural. Nosso objetivo é
-                oferecer acesso à Internet de excelência, colaborando para a
-                modernização do campo e democratização do acesso à Internet.
+                A Wiss Telecom nasceu para oferecer atendimento de qualidade aos
+                moradores da zona rural. Nosso objetivo é levar a todos acesso à
+                Internet de excelência, colaborando para a modernização do campo
+                e democratização do acesso à Internet.
               </p>
             </div>
-          </section>
-          <section id='section3'>
+          </Container>
+        </section>
+        <section className={`${styles.section} ${styles.section3}`}>
+          <Container>
+            <div className={styles.imageContainer}>
+              <Image
+                src={hoe}
+                alt='man with a hoe on field'
+                layout='responsive'
+              />
+            </div>
             <div>
               <p>
                 Com planos sem franquia e com foco total em áreas rurais,
                 trabalhos para levar até você:
               </p>
-              <ul>
+              <ul className={styles.advantagesList}>
                 <li>Mais velocidades</li>
                 <li>Mais estabilidade</li>
                 <li>Valores amigáveis</li>
                 <li>Atendimento personalizado</li>
               </ul>
             </div>
-            <div></div>
-          </section>
-          <section id='contact'>
+          </Container>
+        </section>
+        <section id='contact'>
+          <Container>
             <div></div>
             <div>
               <form>
@@ -162,9 +178,9 @@ export default function Main() {
                 />
               </form>
             </div>
-          </section>
-        </main>
-      </Container>
+          </Container>
+        </section>
+      </main>
     </Row>
   )
 }
