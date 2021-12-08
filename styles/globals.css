@@ -1,16 +1,27 @@
+:root {
+  --main-font: 'Montserrat', sans-serif;
+  --button-font: 'Roboto', sans-serif;
+  --dark-green: #485435;
+  --green: #708745;
+  --olive-green: #5A6C3F;
+  --light-green: #94c049;
+  --very-light-green: #b6d671;
+  --form-bg-color: rgba(90, 108, 63, 0.4);
+  --very-light-greenish-gray: #f1f1e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
