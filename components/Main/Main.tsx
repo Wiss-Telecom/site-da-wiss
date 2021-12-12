@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import Row from '@/components/Row/Row'
 import Container from '@/components/Container/Container'
-import CardContainer from '../CardContainer/CardContainer'
+import CardContainer from '@/components/CardContainer/CardContainer'
 import Card from '@/components/Card/Card'
+import ButtonsContainer from '@/components/ButtonsContainer/ButtonsContainer'
+import LinkButton from '@/components/LinkButton/LinkButton'
 import smile from '@/images/smile.jpg'
 import woman from '@/images/woman.jpg'
 import man from '@/images/img3.jpg'
@@ -19,22 +21,7 @@ export default function Main() {
       <main className={styles.main}>
         <section className={styles.section1} id='section1'>
           <Container>
-            <div className={styles.buttonsContainer}>
-              <a
-                className={styles.linkButton}
-                href='https://radiusnet.wisstelecom.com.br/radiusnet/cda/login.php'
-              >
-                Central do Assinante
-              </a>
-              <a
-                className={styles.linkButton}
-                target='_blank'
-                rel='noreferrer'
-                href='https://wa.me/5519999749477?text=Ol%C3%A1,%20tudo%20bem?'
-              >
-                Fale conosco pelo Whatsapp
-              </a>
-            </div>
+            <ButtonsContainer />
             <div>
               <div className={styles.hero}>
                 <div className={styles.introParagraph}>
