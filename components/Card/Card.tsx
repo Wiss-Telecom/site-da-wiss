@@ -5,7 +5,7 @@ import styles from './Card.module.css'
 
 export default function Card({ imageDescription, imagePath, text }: CardProps) {
   return (
-    <div className={styles.card}>
+    <article className={styles.card}>
       <div className={styles.cardImageContainer}>
         <Image
           alt={imageDescription}
@@ -15,6 +15,6 @@ export default function Card({ imageDescription, imagePath, text }: CardProps) {
         />
       </div>
       <p>{text}</p>
-    </div>
+    </article>
   )
 }
