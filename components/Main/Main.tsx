@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Row from '@/components/Row/Row'
 import Container from '@/components/Container/Container'
+import Card from '@/components/Card/Card'
 import smile from '@/images/smile.jpg'
 import woman from '@/images/woman.jpg'
 import man from '@/images/img3.jpg'
@@ -56,51 +57,27 @@ export default function Main() {
               </div>
             </div>
             <div className={styles.cardContainer}>
-              <div className={styles.card}>
-                <div className={styles.cardImageContainer}>
-                  <Image
-                    alt='man sitting in field, looking to mountains'
-                    src={card2}
-                    layout='fill'
-                    objectFit='cover'
-                  />
-                </div>
-                <p>
-                  Escolha o plano perfeito para atender as suas necessidades!
+              <Card
+                imageDescription='man sitting in field, looking to mountains'
+                imagePath={card2}
+                text='Escolha o plano perfeito para atender as suas necessidades!
                   Temos tecnologia para oferecer a você internet com alta
-                  velocidade, estável e de qualidade!
-                </p>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardImageContainer}>
-                  <Image
-                    alt='plants being irrigated'
-                    src={card1}
-                    layout='fill'
-                    objectFit='cover'
-                  />
-                </div>
-                <p>
-                  Mora ou trabalha na fazenda e não tem acesso fácil a internet?
-                  <br />A Wiss Telecom leva para você a qualidade e a tecnologia
-                  da cidade!
-                </p>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardImageContainer}>
-                  <Image
-                    alt='Woman using a computer on an office'
-                    src={card3}
-                    layout='fill'
-                    objectFit='cover'
-                  />
-                </div>
-                <p>
-                  Para estudar, trabalhar ou lazer, a Wiss Telecom tem internet
+                  velocidade, estável e de qualidade!'
+              />
+              <Card
+                imageDescription='plants being irrigated'
+                imagePath={card1}
+                text='Mora ou trabalha na fazenda e não tem acesso fácil a internet?
+                  A Wiss Telecom leva para você a qualidade e a tecnologia
+                  da cidade!'
+              />
+              <Card
+                imageDescription='Woman using a computer on an office'
+                imagePath={card3}
+                text='Para estudar, trabalhar ou lazer, a Wiss Telecom tem internet
                   rural rápida, estável e por um preço super acessível. É
-                  tecnologia de ponta para o campo!
-                </p>
-              </div>
+                  tecnologia de ponta para o campo!'
+              />
             </div>
           </Container>
         </section>
