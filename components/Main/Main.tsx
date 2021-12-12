@@ -5,7 +5,6 @@ import CardContainer from '@/components/CardContainer/CardContainer'
 import ButtonsContainer from '@/components/ButtonsContainer/ButtonsContainer'
 import smile from '@/images/smile.jpg'
 import woman from '@/images/woman.jpg'
-import man from '@/images/img3.jpg'
 import hoe from '@/images/img2.jpg'
 
 import styles from './Main.module.css'
@@ -97,56 +96,6 @@ export default function Main() {
                   <li>Valores amigáveis</li>
                   <li>Atendimento personalizado</li>
                 </ul>
-              </div>
-            </div>
-          </Container>
-        </section>
-      </Row>
-      <Row>
-        <section id='contact' className={styles.contact}>
-          <Container>
-            <div className={styles.contactContent}>
-              <div className={styles.contactImageContainer}>
-                <Image
-                  src={man}
-                  alt='man with PC on desk'
-                  layout='responsive'
-                />
-              </div>
-              <div>
-                <h2 className={styles.formTitle}>Fale conosco</h2>
-                <form className={styles.form}>
-                  <input
-                    id='name'
-                    type='text'
-                    autoComplete='name'
-                    placeholder='Seu nome'
-                    required
-                    // onChange={(e) => setName(e.target.value)}
-                    className={styles.inputField}
-                  />
-                  <input
-                    id='email'
-                    type='email'
-                    placeholder='Seu e-mail'
-                    required
-                    // onChange={(e) => setEmail(e.target.value)}
-                    className={styles.inputField}
-                  />
-                  <textarea
-                    id='message'
-                    name='message'
-                    placeholder='Sua mensagem'
-                    // onChange={(e) => setMessage(e.target.value)}
-                    className={styles.inputField}
-                  ></textarea>
-                  <input
-                    type='submit'
-                    value='Enviar'
-                    // onClick={(e) => handleSubmit(e)}
-                    className={styles.submit}
-                  />
-                </form>
               </div>
             </div>
           </Container>
