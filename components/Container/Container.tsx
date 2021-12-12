@@ -1,7 +1,4 @@
-type Props = {
-  children: JSX.Element | JSX.Element[]
-}
-
+import { Props } from '@/types/Props'
 import styles from './Container.module.css'
 
 export default function Container({ children }: Props) {
