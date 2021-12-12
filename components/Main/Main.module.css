@@ -1,8 +1,9 @@
 .main {
   text-align: center;
+  min-width: 100%;
 }
 
-.hero {
+.intro {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -154,7 +155,7 @@
 }
   
 @media screen and (min-width: 1200px) {
-  .hero {
+  .intro {
     gap: 2em;
     margin-bottom: 5em;
   }

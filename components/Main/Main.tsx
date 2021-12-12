@@ -12,36 +12,44 @@ import styles from './Main.module.css'
 
 export default function Main() {
   return (
-    <Row>
-      <main className={styles.main}>
-        <section className={styles.section1} id='section1'>
+    <main className={styles.main}>
+      <Row>
+        <Container>
+          <ButtonsContainer />
+        </Container>
+      </Row>
+      <Row>
+        <article>
           <Container>
-            <ButtonsContainer />
-            <div>
-              <div className={styles.hero}>
-                <div className={styles.introParagraph}>
-                  <p>
-                    Somos a Wiss Telecom, uma empresa criada para levar
-                    tecnologia exatamente onde você precisa.
-                  </p>
-                  <p>
-                    Com a gente, você terá a melhor experiência online, na sua
-                    casa ou empresa!
-                  </p>
-                </div>
-                <div className={styles.introImageContainer}>
-                  <Image
-                    src={smile}
-                    alt='Woman with red lipstick smiling'
-                    layout='fill'
-                    objectFit='cover'
-                  />
-                </div>
+            <div className={styles.intro}>
+              <div className={styles.introParagraph}>
+                <p>
+                  Somos a Wiss Telecom, uma empresa criada para levar tecnologia
+                  exatamente onde você precisa.
+                </p>
+                <p>
+                  Com a gente, você terá a melhor experiência online, na sua
+                  casa ou empresa!
+                </p>
+              </div>
+              <div className={styles.introImageContainer}>
+                <Image
+                  src={smile}
+                  alt='Woman with red lipstick smiling'
+                  layout='fill'
+                  objectFit='cover'
+                />
               </div>
             </div>
-            <CardContainer />
           </Container>
-        </section>
+        </article>
+      </Row>
+      <Row>
+        <Container>
+          <CardContainer />
+        </Container>
+      </Row>
+      <Row>
         <section className={`${styles.section} ${styles.section2}`}>
           <Container>
             <div
@@ -64,6 +72,8 @@ export default function Main() {
             </div>
           </Container>
         </section>
+      </Row>
+      <Row>
         <section className={`${styles.section} ${styles.section3}`}>
           <Container>
             <div
@@ -91,6 +101,8 @@ export default function Main() {
             </div>
           </Container>
         </section>
+      </Row>
+      <Row>
         <section id='contact' className={styles.contact}>
           <Container>
             <div className={styles.contactContent}>
@@ -139,7 +151,7 @@ export default function Main() {
             </div>
           </Container>
         </section>
-      </main>
-    </Row>
+      </Row>
+    </main>
   )
 }
