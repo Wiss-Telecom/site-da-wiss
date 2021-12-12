@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Row from '@/components/Row/Row'
 import Container from '@/components/Container/Container'
+import CardContainer from '../CardContainer/CardContainer'
 import Card from '@/components/Card/Card'
 import smile from '@/images/smile.jpg'
 import woman from '@/images/woman.jpg'
@@ -56,7 +57,7 @@ export default function Main() {
                 </div>
               </div>
             </div>
-            <div className={styles.cardContainer}>
+            <CardContainer>
               <Card
                 imageDescription='man sitting in field, looking to mountains'
                 imagePath={card2}
@@ -78,7 +79,7 @@ export default function Main() {
                   rural rápida, estável e por um preço super acessível. É
                   tecnologia de ponta para o campo!'
               />
-            </div>
+            </CardContainer>
           </Container>
         </section>
         <section className={`${styles.section} ${styles.section2}`}>

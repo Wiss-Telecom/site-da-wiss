@@ -50,16 +50,6 @@
   position: relative;
 }
 
-.cardContainer {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2em;
-}
-
 .section {
   padding: 1em 0 2em;
   text-align: left;
@@ -173,11 +163,6 @@
     font-size: 1.2rem;
   }
 
-  .cardContainer {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .section {
     padding: 3em 0;
   }
@@ -238,10 +223,6 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-  }
-
-  .cardContainer {
-    justify-content: space-between;
   }
 
   .section1Content div p {
