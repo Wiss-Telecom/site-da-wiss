@@ -18,6 +18,10 @@
   margin-top: 1.5em;
 }
 
+.sentMessage {
+  width: 80%;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -37,6 +41,10 @@
   outline: none;
   border: 2px solid #9bc346;
   transition: 0.1s;
+}
+
+.inputField::placeholder {
+  font-family: sans-serif;
 }
 
 .inputField:last-of-type {
@@ -74,6 +82,10 @@
   
   .formTitle {
     margin-top: 0;
+  }
+
+  .sentMessage {
+    width: 60%;
   }
 }
 
