@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import HCaptcha from '@hcaptcha/react-hcaptcha'
 
 import Container from '@/components/Container/Container'
 import Row from '@/components/Row/Row'
@@ -11,41 +12,54 @@ import spinner from '@/images/spinner.svg'
 import styles from './ContactForm.module.css'
 
 export default function ContactForm() {
-  const API_URI =
-    'https://us-central1-mail-sender-55e6b.cloudfunctions.net/sendMail'
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
+  const [token, setToken] = useState('')
 
-  const sendEmail = async (event: React.SyntheticEvent) => {
+  const hcaptchaRef = useRef(null)
+
+  const clearFields = () => {
+    setName('')
+    setEmail('')
+    setMessage('')
+  }
+
+  const onHCaptchaChange = async (token: string) => {
+    if (!token) {
+      return
+    }
+    setToken(token)
+  }
+
+  const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault()
     setSending(true)
-    let data = { name, email, message }
-
-    await fetch(API_URI, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          setSending(false)
-          setSubmitted(true)
-          setName('')
-          setEmail('')
-          setMessage('')
-        }
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message, captcha: token })
       })
-      .catch((error) => {
-        console.error(error)
+      if (response.ok) {
+        setSubmitted(true)
         setSending(false)
+      } else {
         setSubmitted(false)
-      })
+        setSending(false)
+        const error = await response.json()
+        throw new Error(error.message)
+      }
+    } catch (error) {
+      console.error(error)
+    } finally {
+      clearFields()
+    }
   }
 
   return (
@@ -75,7 +89,7 @@ export default function ContactForm() {
                   <p>Retornaremos o contato em breve</p>
                 </div>
               ) : (
-                <form className={styles.form} onSubmit={sendEmail}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                   <input
                     id='name'
                     type='text'
@@ -84,6 +98,7 @@ export default function ContactForm() {
                     aria-label='Seu nome'
                     required
                     className={styles.inputField}
+                    onChange={(event) => setName(event.target.value)}
                   />
                   <input
                     id='email'
@@ -92,6 +107,7 @@ export default function ContactForm() {
                     aria-label='Seu e-mail'
                     required
                     className={styles.inputField}
+                    onChange={(event) => setEmail(event.target.value)}
                   />
                   <textarea
                     id='message'
@@ -99,7 +115,16 @@ export default function ContactForm() {
                     placeholder='Sua mensagem'
                     aria-label='Sua mensagem'
                     className={styles.inputField}
+                    required
+                    onChange={(event) => setMessage(event.target.value)}
                   ></textarea>
+                  <HCaptcha
+                    ref={hcaptchaRef}
+                    sitekey={
+                      process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string
+                    }
+                    onVerify={onHCaptchaChange}
+                  />
                   <input
                     type='submit'
                     value='Enviar'
