@@ -27,7 +27,10 @@
       ],
       "@/icons/*": [
         "public/icons/*"
-      ]
+      ],
+      "@/types/*": [
+        "types/*"
+      ],
     },
     "incremental": true
   },

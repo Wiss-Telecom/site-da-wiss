@@ -1,0 +1,22 @@
+.cardContainer {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cardContainer {
+    justify-content: space-between;
+  }
+}

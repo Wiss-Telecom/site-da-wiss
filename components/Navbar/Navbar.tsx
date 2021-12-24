@@ -19,7 +19,9 @@ export default function Navbar() {
         <Container>
           <div className={styles.navContainer}>
             <div className={styles.logoContainer}>
-              <Logo />
+              <a href='#top'>
+                <Logo />
+              </a>
             </div>
             <div className={styles.menuButton} onClick={handleMenuClick}>
               <span
@@ -48,11 +50,13 @@ export default function Navbar() {
               }`}
             >
               <ul className={styles.navList}>
-                <li>Home</li>
-                <li>
+                <li onClick={handleMenuClick}>
+                  <a href='#top'>Home</a>
+                </li>
+                <li onClick={handleMenuClick}>
                   <a href='#contact'>Contato</a>
                 </li>
-                <li>
+                <li onClick={handleMenuClick}>
                   <a
                     className={styles.linkButton}
                     href='https://radiusnet.wisstelecom.com.br/radiusnet/cda/login.php'

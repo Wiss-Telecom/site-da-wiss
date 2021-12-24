@@ -1,6 +1,4 @@
-type Props = {
-  children: JSX.Element | JSX.Element[]
-}
+import { Props } from '@/types/Props'
 
 import styles from './Row.module.css'
 
