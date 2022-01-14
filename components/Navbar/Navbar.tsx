@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import Link from 'next/link'
+
 import Row from '@/components/Row/Row'
 import Container from '@/components/Container/Container'
 import Logo from '@/components/Logo/Logo'
@@ -51,10 +53,14 @@ export default function Navbar() {
             >
               <ul className={styles.navList}>
                 <li onClick={handleMenuClick}>
-                  <a href='#top'>Home</a>
+                  <Link href='/#top'>
+                    <a>Home</a>
+                  </Link>
                 </li>
                 <li onClick={handleMenuClick}>
-                  <a href='#contact'>Contato</a>
+                  <Link href='/#contact'>
+                    <a>Contato</a>
+                  </Link>
                 </li>
                 <li onClick={handleMenuClick}>
                   <a

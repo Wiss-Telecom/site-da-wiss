@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Row from '@/components/Row/Row'
 import Container from '@/components/Container/Container'
 import facebook from '@/icons/facebook.svg'
@@ -24,10 +25,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href='#contact'>Fale conosco</a>
+                <Link href='/#contact'>
+                  <a>Contato</a>
+                </Link>
               </li>
               <li>
-                <a href='#'>Termo de Privacidade</a>
+                <Link href='/privacidade'>
+                  <a>Política de Privacidade</a>
+                </Link>
               </li>
             </ul>
             <ul className={styles.socialMediaFooterList}>
