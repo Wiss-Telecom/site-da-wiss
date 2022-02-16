@@ -9,12 +9,6 @@ interface ContactMessage {
   message: string
 }
 
-const sleep = () => new Promise<void>((resolve) => {
-  setTimeout(() => {
-    resolve()
-  }, 2000)
-})
-
 const sendEmail = async (req: ContactMessage) => {
   const { name, email, message } = req
   await fetch(API_URI, {
