@@ -1,12 +1,5 @@
 .navWrapper {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 5em;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  z-index: 1;
+  @apply sticky top-0 z-50 w-full h-16 bg-white shadow-lg flex items-center justify-between;
 }
 
 .navContainer {
@@ -102,19 +95,18 @@
     background-color: #fff;
   }
 
-.navList {
+  .navList {
     text-transform: uppercase;
     color: var(--very-light-greenish-gray);
     margin-left: 1.5em;
     margin-top: 6em;
   }
 
-.navList li {
+  .navList li {
     margin-bottom: 1.5em;
     white-space: nowrap;
   }
 }
- 
 
 @media screen and (min-width: 768px) {
   .navList {
