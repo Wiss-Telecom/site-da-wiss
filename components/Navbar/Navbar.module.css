@@ -1,59 +1,36 @@
 .navWrapper {
-  @apply sticky top-0 z-50 w-full h-16 bg-white shadow-lg flex items-center justify-between;
+  @apply sticky top-0 py-10 z-50 w-full inset-x-1/2 ml-[50%] mr-[50%] h-16 bg-white shadow-lg flex items-center justify-between;
 }
 
 .navContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @apply flex items-center justify-between;
 }
 
 .logoContainer {
-  width: 35%;
-  max-width: 150px;
+  @apply w-1/3 max-w-[150px];
 }
 
 .navList {
-  list-style: none;
-  padding-left: 0;
+  @apply list-none pl-0;
 }
 
 .navList li {
-  margin-bottom: 15px;
+  @apply sm:mb-4;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .menuButton {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 3;
-    -webkit-appearance: none;
-    border: 0;
-    background: transparent;
-    border-radius: 0;
-    height: 30px;
-    width: 35px;
-    cursor: pointer;
-    margin-right: 1rem;
-    margin-top: 1.1rem;
-    -webkit-tap-highlight-color: transparent;
+    @apply absolute top-0 right-0 flex flex-col justify-center z-30 w-10 h-10
+           bg-transparent rounded-none h-8 w-9 cursor-pointer mr-4 mt-5;
   }
 
   .iconBar {
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: var(--dark-green);
-    margin-top: 5px;
-    transition: 0.3s;
+    @apply block w-full h-1 bg-olive-200 mt-1.5 transition duration-300;
   }
 
   .bg,
   .navContent {
+    @apply transition duration-500 ease-in-out transform;
     position: fixed;
     bottom: 0;
     left: 100%;
@@ -62,23 +39,19 @@
   }
 
   .bg {
-    background-color: #000000;
-    opacity: 0.6;
+    @apply bg-neutral-900 opacity-60;
   }
 
   .bgShow {
-    width: 100%;
-    left: 0;
+    @apply w-full left-0;
   }
 
   .navContent {
-    background: rgba(72, 84, 53, 1);
-    transition: 0.3s ease;
+    @apply transition duration-300 ease-in-out bg-olive-200;
   }
 
   .navContentShow {
-    width: 70%;
-    left: 30%;
+    @apply w-9/12 left-[30%];
   }
 
   .activeIconBar:nth-of-type(1) {
@@ -96,8 +69,8 @@
   }
 
   .navList {
+    @apply text-gray-50;
     text-transform: uppercase;
-    color: var(--very-light-greenish-gray);
     margin-left: 1.5em;
     margin-top: 6em;
   }
@@ -120,9 +93,8 @@
   }
 
   .navList li:last-of-type {
+    @apply bg-green-100 text-gray-50;
     padding: 8px 15px;
     border-radius: 50px;
-    background-color: var(--light-green);
-    color: var(--very-light-greenish-gray);
   }
 }

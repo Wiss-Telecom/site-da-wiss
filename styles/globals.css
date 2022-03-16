@@ -1,28 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --main-font: 'Montserrat', sans-serif;
-  --button-font: 'Roboto', sans-serif;
-  --dark-green: #485435;
-  --green: #708745;
-  --olive-green: #5a6c3f;
-  --light-green: #94c049;
-  --very-light-green: #b6d671;
-  --form-bg-color: #3c4439;
-  --very-light-greenish-gray: #f1f1e8;
-}
-
-* {
-  @apply box-border;
-}
-
-html,
-body {
-  @apply p-0 m-0 scroll-smooth;
-}
-
-a {
-  @apply no-underline;
-}
