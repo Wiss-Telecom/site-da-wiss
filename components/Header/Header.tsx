@@ -9,10 +9,9 @@ export default function Header() {
   const style = {
     backgroundImage: `url(${bg.src})`,
     backgroundSize: 'cover',
-    with: '100%',
+    width: '100vw',
     borderTop: '1px solid var(--very-light-greenish-gray)',
-    borderBottom: '1px solid var(--very-light-greenish-gray)',
-    marginTop: '5em'
+    borderBottom: '1px solid var(--very-light-greenish-gray)'
   }
   return (
     <Row>

@@ -1,26 +1,12 @@
 .mainTitle {
-  padding: 3em 0;
-  text-align: right;
-  text-transform: uppercase;
-  width: 75%;
-  max-width: 500px;
-  margin-left: auto;
-  font-size: 2.25rem;
-  color: var(--very-light-greenish-gray);
-  text-shadow: 3px 4px 5px #1C0C08;
-  font-weight: 700;
+  @apply py-40 lg:py-52 xl:py-64 px-0 text-right uppercase w-3/4 max-w-[500px]
+  text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl text-gray-50 drop-shadow-lg font-bold ml-auto;
 }
 
 .titleImageContainer {
-  position: relative;
+  @apply relative;
 }
 
 .titleImage {
-  display: block;
-}
-
-@media screen and (min-width: 768px) {
-  .mainTitle {
-    font-size: 3.5em;
-  }
+  @apply block;
 }
