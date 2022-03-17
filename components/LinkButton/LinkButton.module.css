@@ -1,16 +1,6 @@
 .linkButton {
-  width: 300px;
-  margin: 0.5em;
-  padding: 0.9em 1em;
-  border-radius: 10px;
-  color: var(--very-light-greenish-gray);
-  background-color: var(--light-green);
-  text-decoration: none;
-  font-family: var(--button-font);
-  font-size: 1.15em;
-  font-weight: 700;
-  -webkit-box-shadow: 0 0 7px -2px rgba(72,84,53,0.55); 
-  box-shadow: 0 0 7px -2px rgba(72,84,53,0.55);
+  @apply w-96 m-2 p-4 rounded-xl text-gray-50 bg-green-100 no-underline font-bold
+  text-lg shadow-xl;
 }
 
 .linkButton:first-of-type {
@@ -23,7 +13,7 @@
     margin: 0.5em;
     padding: 0.85em 1em;
     border-radius: 10px;
-    font-size: 1.25em;
+    font-size: 1.15em;
   }
 
   .linkButton:first-of-type {
@@ -34,6 +24,6 @@
 @media screen and (min-width: 1200px) {
   .linkButton {
     width: 420px;
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 }

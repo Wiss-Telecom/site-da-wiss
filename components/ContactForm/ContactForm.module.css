@@ -1,5 +1,5 @@
 .contact {
-  background-color: var(--form-bg-color);
+  @apply bg-olive-300 w-full inset-x-1/2 ml-[50%] mr-[50%];
 }
 
 .contactContent {
@@ -76,10 +76,11 @@
     align-items: flex-start;
   }
 
-  .formTitle, .form {
+  .formTitle,
+  .form {
     max-width: 100%;
   }
-  
+
   .formTitle {
     margin-top: 0;
   }
