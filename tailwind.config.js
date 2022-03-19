@@ -15,6 +15,9 @@ module.exports = {
           100: '#5a6c3f',
           200: '#485435',
           300: '#3c4439'
+        },
+        graynishGreen: {
+          50: '#bcc3b1'
         }
       }
     }
