@@ -63,7 +63,10 @@ export default function Footer() {
           </div>
         </Container>
         <div className={styles.copyright}>
-          <span>© WissTelecom 2021 - Todos os direitos reservados</span>
+          <span>
+            Coyright © WissTelecom {new Date().getFullYear()} - Todos os
+            direitos reservados
+          </span>
         </div>
       </footer>
     </Row>
