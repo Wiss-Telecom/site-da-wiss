@@ -1,9 +1,5 @@
 .footer {
-  padding: 1.5em 0;
-  background-color: var(--dark-green);
-  color: var(--very-light-greenish-gray);
-  font-size: 1.15em;
-  font-weight: 700;
+  @apply w-full inset-x-1/2 ml-[50%] mr-[50%] py-6 bg-olive-300 text-gray-50 text-lg font-bold;
 }
 
 .footerContent {
@@ -26,7 +22,8 @@
   font-weight: 600;
 }
 
-.footerLinksList, .socialMediaFooterList {
+.footerLinksList,
+.socialMediaFooterList {
   list-style: none;
   padding: 0;
 }
@@ -35,7 +32,7 @@
   margin-top: 0.8em;
 }
 
-.footerLinksList li:first-of-type{
+.footerLinksList li:first-of-type {
   margin-top: 0;
 }
 
