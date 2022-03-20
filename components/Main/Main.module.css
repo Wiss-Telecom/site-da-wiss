@@ -3,25 +3,21 @@
 }
 
 .section {
+  @apply w-full inset-x-1/2 bg-olive-200 text-gray-50;
   padding: 1em 0 2em;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
 .section2 {
-  background-color: var(--olive-green);
-  color: var(--very-light-greenish-gray);
+  @apply text-center;
 }
 
 .imageContainer {
   overflow: hidden;
   margin: 3em auto 3em;
   border-radius: 10px;
-}
-
-.section3 {
-  text-align: center;
 }
 
 .advantagesList {
@@ -52,6 +48,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .section {
+    padding: 5rem;
+    font-size: 1.25rem;
+  }
+
   .section1Content div p {
     max-width: 90%;
   }
