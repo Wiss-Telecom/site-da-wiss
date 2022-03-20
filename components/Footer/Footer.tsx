@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Row from '@/components/Row/Row'
 import Container from '@/components/Container/Container'
 import facebook from '@/icons/facebook.svg'
 import instagram from '@/icons/instagram.svg'
