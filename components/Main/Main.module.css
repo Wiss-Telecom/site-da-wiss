@@ -1,29 +1,5 @@
 .main {
-  text-align: center;
-  min-width: 100%;
-}
-
-.intro {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  margin-bottom: 4em;
-}
-
-.introParagraph {
-  max-width: 80%;
-  margin-right: auto;
-  padding-top: 1em;
-  text-align: left;
-  font-size: 1.1rem;
-  line-height: 1.6rem;
-  align-self: center;
-}
-
-.introImageContainer {
-  width: 0;
-  position: relative;
+  @apply w-full inset-x-1/2 text-center;
 }
 
 .section {
@@ -54,12 +30,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .introParagraph {
-    max-width: 65%;
-    padding-top: 2.5em;
-    font-size: 1.2rem;
-  }
-
   .section {
     padding: 3em 0;
   }
@@ -80,27 +50,8 @@
     direction: rtl;
   }
 }
-  
+
 @media screen and (min-width: 1200px) {
-  .intro {
-    gap: 2em;
-    margin-bottom: 5em;
-  }
-
-  .introParagraph {
-    width: 100%;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .introImageContainer {
-    width: 100%;
-    min-height: 450px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-
   .section1Content div p {
     max-width: 90%;
   }
@@ -108,5 +59,4 @@
   .contactContent {
     align-items: center;
   }
-
 }
