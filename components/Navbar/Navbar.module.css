@@ -1,5 +1,5 @@
 .navWrapper {
-  @apply sticky top-0 py-10 z-50 w-full inset-x-1/2 ml-[50%] mr-[50%] h-16 bg-white shadow-lg flex items-center justify-between;
+  @apply sticky top-0 py-2 z-50 w-full inset-x-1/2 bg-white shadow-lg flex items-center justify-between;
 }
 
 .navContainer {
