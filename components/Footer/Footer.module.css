@@ -39,6 +39,7 @@
 .socialMediaFooterList {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 60%;
 }
 
@@ -73,6 +74,7 @@
   .socialMediaFooterList {
     margin-top: 0;
     justify-self: center;
+    align-items: start;
     width: 80%;
   }
 }
