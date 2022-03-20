@@ -14,7 +14,7 @@ export default function Main() {
       <ButtonsContainer />
       <Intro />
       <CardContainer />
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section1}`}>
         <Container>
           <div className={`${styles.sectionContent} ${styles.section1Content}`}>
             <div className={styles.imageContainer}>
