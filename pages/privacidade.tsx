@@ -5,7 +5,7 @@ import styles from '../styles/Privacy.module.css'
 
 export default function Home() {
   return (
-    <main className='pb-8'>
+    <main className={styles.mainContent}>
       <Container>
         <h1 className={styles.mainTitle}>Política de Privacidade</h1>
         <h2 className={styles.subTitle}>
@@ -18,7 +18,7 @@ export default function Home() {
           A Wiss Telecom desenvolveu a presente Política de Privacidade, em
           conformidade com a{' '}
           <a
-            className='underline pointer'
+            className='underline pointer font-bold'
             target='_blank'
             rel='noreferrer'
             href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm'
@@ -42,10 +42,10 @@ export default function Home() {
           prestação de serviços, bem como para fins de adequação à regulação dos
           serviços de telecomunicações.
         </p>
-        <ol className='list-decimal'>
+        <ol className={styles.mainList}>
           <li>
             <h3>NO QUE CONSISTE A LEI GERAL DE PROTEÇÃO DE DADOS (LGPD)?</h3>
-            <p>
+            <p className={styles.mainListParagraph}>
               É uma lei federal que estabelece regras ao uso de dados pessoais
               por entidades públicas e privadas. A LGPD garante direitos aos
               titulares dos dados e estabelece a regra para coleta,
@@ -55,7 +55,7 @@ export default function Home() {
           </li>
           <li>
             <h3>QUAIS SERÃO OS DADOS COLETADOS?</h3>
-            <p>
+            <p className={styles.mainListParagraph}>
               A Wiss Telecom poderá coletar e utilizar dados dos seus clientes
               para alimentação de seu sistema interno de cadastro de clientes,
               os quais podem ser classificados em duas categorias:
@@ -63,29 +63,29 @@ export default function Home() {
 
             <ol className='list-[lower-roman] ml-4'>
               <li>
-                DADOS PESSOAIS (dados que trazem elementos que identificam – ou
-                podem identificar – um indivíduo);
+                <em>DADOS PESSOAIS</em> (dados que trazem elementos que
+                identificam – ou podem identificar – um indivíduo);
               </li>
               <li>
-                DADOS FINANCEIROS (trazem informações bancárias e/ou relativas
-                ao sistema financeiro nacional);
+                <em>DADOS FINANCEIROS</em> (trazem informações bancárias e/ou
+                relativas ao sistema financeiro nacional);
               </li>
             </ol>
-            <p>
+            <p className={styles.mainListParagraph}>
               A Wiss Telecom poderá coletar informações tais como: Protocolo de
               Internet (IP, com data e hora e origem), dentre outros.
             </p>
           </li>
           <li>
             <h3>ACEITAÇÃO DA COLETA E DO COMPARTILHAMENTO DE DADOS</h3>
-            <p>
+            <p className={styles.mainListParagraph}>
               Ao estar ciente da Política de Privacidade praticada pela Wiss
               Telecom, o cliente reitera que está consciente de que os seus
               dados pessoais são usados e tratados com finalidade comercial
               legítima e que foram coletados mediante o seu consentimento livre,
               voluntário, informado e ausente de dúvidas.
             </p>
-            <p>
+            <p className={styles.mainListParagraph}>
               A Wiss Telecom somente dará acesso aos dados pessoais de seus
               clientes a terceiros
             </p>
@@ -100,7 +100,7 @@ export default function Home() {
                 investigação de ilícitos.
               </li>
             </ol>
-            <p>
+            <p className={styles.mainListParagraph}>
               Os clientes declaram-se cientes da possibilidade de violação da
               segurança dos servidores da Wiss Telecom por ataques de hackers
               e/ou outras circunstâncias a que sistemas conectados à internet
@@ -115,7 +115,7 @@ export default function Home() {
           </li>
           <li>
             <h3>USO E TRATAMENTO DOS DADOS</h3>
-            <p>
+            <p className={styles.mainListParagraph}>
               A Wiss Telecom poderá utilizar os dados coletados para uma série
               de propósitos, incluindo, mas não se limitando:
             </p>
@@ -131,7 +131,7 @@ export default function Home() {
               </li>
               <li>Cumprir outras obrigações legais e regulatórias;</li>
             </ol>
-            <p>
+            <p className={styles.mainListParagraph}>
               A Wiss Telecom poderá compartilhar dados dos seus clientes com:
             </p>
             <ul className='list-disc ml-8'>
@@ -151,7 +151,7 @@ export default function Home() {
                 dos clientes.
               </li>
             </ul>
-            <p>
+            <p className={styles.mainListParagraph}>
               A Wiss Telecom adota medidas técnicas de proteção dos dados
               pessoais, dentre as quais, destacam-se:
             </p>
@@ -189,7 +189,7 @@ export default function Home() {
                 Estabelecimento de mecanismos de descarte seguro dos dados,
                 eliminando a possibilidade de restauração;
               </li>
-              <li>
+              <li className='mb-4'>
                 Manutenção de inventário atualizado de todos os dados
                 armazenados, processados ou transmitidos.
               </li>
@@ -197,7 +197,7 @@ export default function Home() {
           </li>
           <li>
             <h3>ARMAZENAMENTO E EXCLUSÃO</h3>
-            <p>
+            <p className={styles.mainListParagraph}>
               Os dados serão armazenados pelo tempo necessário, principalmente
               visando observar e atender aos requisitos legais e regulatórios. A
               exclusão dos dados se dará de forma definitiva no prazo julgado
@@ -207,7 +207,7 @@ export default function Home() {
           </li>
           <li>
             <h3>TRATAMENTO E TRANSFERÊNCIA DE INFORMAÇÃO</h3>
-            <p>
+            <p className={styles.mainListParagraph}>
               A utilização dos dados será limitada aos negócios realizados e seu
               uso restrito às partes interessadas, responsáveis pela entrega dos
               serviços e produtos contratados.
@@ -215,7 +215,7 @@ export default function Home() {
           </li>
           <li>
             <h3>DIREITOS E DEVERES DOS CLIENTES</h3>
-            <p>
+            <p className={styles.mainListParagraph}>
               Quando autorizado pelas leis aplicáveis, o cliente poderá, por
               meio dos canais oficiais de comunicação da Wiss Telecom,
               solicitar:
@@ -235,12 +235,12 @@ export default function Home() {
                 A correção dos dados pessoais que apresentem qualquer
                 imprecisão;
               </li>
-              <li>A exclusão dos seus dados pessoais.</li>
+              <li className='mb-4'>A exclusão dos seus dados pessoais.</li>
             </ul>
           </li>
           <li>
             <h3>LEGISLAÇÃO E FORO COMPETENTE</h3>
-            <p>
+            <p className={styles.mainListParagraph}>
               Esta Política será regida, interpretada e executada de acordo com
               as leis da República Federativa do Brasil, sendo competente o Foro
               da Comarca de Pirassununga, Estado de São Paulo, para dirimir
@@ -252,7 +252,7 @@ export default function Home() {
           </li>
           <li>
             <h3>FALE CONOSCO</h3>
-            <p>
+            <p className={styles.mainListParagraph}>
               Em caso de dúvidas, solicitações em relação à Lei Geral de
               Proteção de Dados (LGPD) ou sobre a nossa Política de Privacidade,
               entre em contato pelos canais oficiais de comunicação da Wiss
@@ -261,28 +261,31 @@ export default function Home() {
             <ul>
               <li>
                 E-mail:{' '}
-                <a href='mailto:wiss@wisstelecom.com.br'>
+                <a className='underline' href='mailto:wiss@wisstelecom.com.br'>
                   wiss@wisstelecom.com.br
                 </a>
               </li>
               <li>
+                WhatsApp:{' '}
                 <a
-                  className={styles.linkButton}
+                  className='underline'
                   target='_blank'
                   rel='noreferrer'
                   href='https://wa.me/5519999749477'
                 >
-                  WhatsApp (19) 99974-9477
+                  (19) 99974-9477
                 </a>
               </li>
               <li>
                 <Link href='/#contact'>
-                  <a>Nosso formulário de contato</a>
+                  <a className='underline'>Nosso formulário de contato</a>
                 </Link>
               </li>
             </ul>
           </li>
         </ol>
+        <p className='mt-6 text-xl text-center'>Atenciosamente,</p>
+        <p className='text-center text-xl'>Wiss Telecom</p>
       </Container>
     </main>
   )
