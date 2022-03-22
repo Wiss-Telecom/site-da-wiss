@@ -33,8 +33,16 @@ export default function Home() {
           O Contrato de Prestação de Serviço de Comunicação Multimídia
           encontra-se devidamente registrado no X Cartório de Títulos e
           Documentos de XXXX sob n° XXXXXX, e que se encontra disponível para
-          acesso no seguinte link: XXXXXXX, e que faz parte integrante e
-          indissociável da presente.
+          acesso{' '}
+          <a
+            className='underline'
+            target='_blank'
+            rel='noreferrer'
+            href='/contrato.pdf'
+          >
+            neste link
+          </a>
+          , e que faz parte integrante e indissociável da presente.
         </p>
         <p className={styles.paragraph}>
           A coleta de dados dos clientes pela Wiss Telecom e inclusive o seu
