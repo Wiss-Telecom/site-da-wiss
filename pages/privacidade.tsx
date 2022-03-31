@@ -31,9 +31,8 @@ export default function Home() {
         </p>
         <p className={styles.paragraph}>
           O Contrato de Prestação de Serviço de Comunicação Multimídia
-          encontra-se devidamente registrado no X Cartório de Títulos e
-          Documentos de XXXX sob n° XXXXXX, e que se encontra disponível para
-          acesso{' '}
+          encontra-se devidamente registrado no Cartório de Títulos e Documentos
+          de Pirassununga, e que se encontra disponível para acesso{' '}
           <a
             className='underline'
             target='_blank'
