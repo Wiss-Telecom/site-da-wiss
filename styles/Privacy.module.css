@@ -1,5 +1,5 @@
 .mainContent {
-  @apply pb-8 text-lg;
+  @apply pb-8 text-lg font-semibold;
 }
 
 .mainTitle {
