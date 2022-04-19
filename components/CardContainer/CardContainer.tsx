@@ -29,7 +29,7 @@ export default function CardContainer() {
           imageDescription='Woman using a computer on an office'
           imagePath={card3}
           text='Para estudar, trabalhar ou lazer, a Wiss Telecom tem internet
-                    rural rápida, estável e por um preço super acessível. &Eacute
+                    rural rápida, estável e por um preço super acessível. É
                     tecnologia de ponta para o campo!'
         />
       </section>
